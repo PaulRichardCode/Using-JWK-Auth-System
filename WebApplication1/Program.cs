@@ -1,8 +1,15 @@
+using WebApplication1.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 
+//dependency injecttion
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+{
+    var connectionString = builder.Configuration.GetConnectionString;
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
