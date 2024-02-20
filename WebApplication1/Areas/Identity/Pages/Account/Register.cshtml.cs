@@ -127,11 +127,12 @@ namespace WebApplication1.Areas.Identity.Pages.Account
             {
                 var user = new ApplicationUser()
                 {
-                FirstName = Input.FirstName,
-                LastName = Input.LastName,
-                Email = Input.Email,
-                PhoneNumber = Input.PhoneNumber,
-                Address = Input.Address
+                    FirstName = Input.FirstName,
+                    LastName = Input.LastName,
+                    Email = Input.Email,
+                    PhoneNumber = Input.PhoneNumber,
+                    Address = Input.Address,
+                    CreatedAt = DateTime.Now
                 };
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
