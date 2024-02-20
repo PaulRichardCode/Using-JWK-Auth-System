@@ -8,7 +8,7 @@ builder.Services.AddRazorPages();
 //dependency injecttion
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
-    var connectionString = builder.Configuration.GetConnectionString;
+    var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 });
 var app = builder.Build();
 
