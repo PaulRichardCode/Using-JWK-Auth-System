@@ -21,7 +21,7 @@ namespace WebApplication1.Pages
         {
             var task = userManager.GetUserAsync(User);
             task.Wait();
-            appUser = task.Result;\\
+            appUser = task.Result;
         }
     }
 }
